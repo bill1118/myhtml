@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    background-image: url(./images/bg.jpg);
+}
+img {
+    display:block;
+}
+.box{
+    width: 1000px;
+    margin: 0 auto; /*間距自動偵測必須搭配寬度(width)*/
+}
+.btn{
+    float:left; /*用float浮動區塊，覆蓋原來的block*/
+}
