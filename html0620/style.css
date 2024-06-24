@@ -2,13 +2,63 @@ body {
     margin: 0;
     background-image: url(./images/bg.jpg);
 }
+
 img {
-    display:block;
+    display: block;
 }
-.box{
+
+.box {
     width: 1000px;
-    margin: 0 auto; /*間距自動偵測必須搭配寬度(width)*/
+    margin: 0 auto;
+    /*間距自動偵測必須搭配寬度(width)*/
 }
-.btn{
-    float:left; /*用float浮動區塊，覆蓋原來的block*/
+
+.btn {
+    float: left;
+    /*用float浮動區塊，覆蓋原來的block，會自動抓內容得尺寸(寬高)*/
+}
+
+.col {
+    font-size: 14px;
+    float: left;
+    width: 446px;
+    /*文字會自動延展，所以要自訂尺寸，再用float:left*/
+    border: dotted 2px #369;
+    margin: 10px;
+    padding: 15px;
+}
+
+.col span {
+    color: red
+}
+
+hr {
+    border: #995d33 1px solid;
+}
+
+address {
+    font-style: normal;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 150%;
+    /*相等font-size:1.5em*/
+}
+
+p {
+    font-size: 1em;
+    /*<p>預設是1em*/
+}
+
+.footer {
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: dotted 2px #995d33;
+    padding: 20px 0;
 }
