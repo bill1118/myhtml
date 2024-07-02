@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*一定要在第一行*/
 /* 重置所有標籤的樣式 */
 * {
@@ -49,8 +48,22 @@ img {
 a {
     display: block; /* 將預設inline改為block */
     text-decoration: none;
+    color: #444;
 }
-
+/* 共用區 */
+.btn-s{
+    background-color: aliceblue;
+    width: auto!important;
+    height: 35px;
+    line-height: 32px;
+    padding: 0 20px;
+    border-radius: 99px;
+    transition: .35s ease-in-out;
+}
+.btn-s:hover{
+    background-color: #444;
+    color:white;
+}
 /*頁首區*/
 #topbar {
     /* id用#號 */
@@ -59,7 +72,8 @@ a {
     display: flex;
     /* 主軸均分貼齊頭尾 */
     justify-content: space-between;
-    align-items: center; /* 副軸(垂直)置中 */
+    /* 副軸(垂直)置中 */
+    align-items: center; 
     padding: 30px;
 }
 
@@ -75,8 +89,8 @@ a {
     display: flex;
 }
 .navigation .icon a {
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
     margin-left: 10px;
     transition: all  0.35s ease-in-out;
 }
@@ -102,8 +116,16 @@ a {
     display: flex;
     margin: 10px 0; /* 控制副層的外距 */
 }
+.navigation .menu li{
+    border-right: solid 1px #444;
+}
+.navigation .menu li:last-child{ /* 控制後一個元素不要有分隔線 */
+    border-right: none;
+}
 .navigation .menu a{
     color: black;
+    font-size: 1.4rem;
+    line-height: 1;
     margin: 0 10px; /* 控制子層的外距 */
     border-bottom:  solid 2px transparent; /* 留2像素的空間，並透明 */
 }
