@@ -126,7 +126,12 @@
 
             <input type="checkbox" name="order" id="order-5" value="健康">
             <label for="order-5">健康</label>
+            <!-- checkbox為複選，必須帶值才能回傳給資料庫 -->
         </fieldset>
+
+        <label for="message">留言</label>
+        <textarea name="message" id="message" title="留言欄位" rows="10" cols="50"></textarea>
+
         <div>
             <input type="reset" name="btn__reset--m ember" id="btn__reset--member" value="重填">
             <input type="submit" name="btn__submit--member" id="btn__submit--member" value="送出">
