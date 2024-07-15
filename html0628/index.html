@@ -39,6 +39,61 @@
         </nav>
     </header>
     <main>
+        <section id="banner"></section>
+        <section id="news">
+            <header class="title">
+                <h2>NEWS</h2>
+                <h3>最新消息</h3>
+            </header>
+            <div class="box__list">
+                <article class="item">
+                    <!-- a>(figure>img)+div.content>h1+p -->
+                    <a href="">
+                        <figure><img src="./images/pt_news1.jpg" alt=""></figure>
+                        <div class="content">
+                            <h1>NEWS TITLE</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repudiandae iusto sunt id tempora adipisci omnis, nisi exercitationem fuga fugiat distinctio magni nesciunt aliquid minima, labore vel unde, ullam eos!</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="item">
+                    <a href="">
+                        <figure><img src="./images/pt_news2.jpg" alt=""></figure>
+                        <div class="content">
+                            <h1>NEWS TITLE</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repudiandae iusto sunt id tempora adipisci omnis, nisi exercitationem fuga fugiat distinctio magni nesciunt aliquid minima, labore vel unde, ullam eos!</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="item">
+                    <a href="">
+                        <figure><img src="./images/pt_news3.jpg" alt=""></figure>
+                        <div class="content">
+                            <h1>NEWS TITLE</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repudiandae iusto sunt id tempora adipisci omnis, nisi exercitationem fuga fugiat distinctio magni nesciunt aliquid minima, labore vel unde, ullam eos!</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+        <section id="service">
+            <header class="title">
+                <h2>SERVICE</h2>
+                <h3>服務項目</h3>
+            </header>
+        </section>
+        <section id="video">
+            <header class="title">
+                <h2>VIDEO</h2>
+                <h3>相關影片</h3>
+            </header>
+        </section>
+        <section id="about">
+            <header class="title">
+                <h2>ABOUT</h2>
+                <h3>關於我們</h3>
+            </header>
+        </section>
         <section id="contact">
             <header class=title>
                 <h2>CONTACT</h2>
@@ -52,11 +107,12 @@
                 <input type="text" name="tel" id="tel" title="連絡電話欄位" placeholder="請輸入連絡電話" autocomplete>
 
                 <label for="tel">*Email:</label>
-                <input type="text" name="email" id="email" title="email欄位" placeholder="請輸入電子郵件信箱" required autocomplete>
+                <input type="text" name="email" id="email" title="email欄位" placeholder="請輸入電子郵件信箱" required
+                    autocomplete>
 
                 <label for="message">*留言</label>
                 <textarea name="message" id="message" title="留言欄位" rows="10" cols="50"></textarea>
-                
+
                 <small>此表單為練習作品，不具有蒐集資料的功能</small>
 
                 <!-- 表單按鈕一定要在form裡面 -->
@@ -64,7 +120,10 @@
                     <span>送出</span>
                 </button>
             </form>
-        </section> 
+            <!-- 裝飾花 -->
+            <div class="flower_r"><img src="./images/flower_r.png" alt="裝飾紅花"></div>
+            <div class="flower_w"><img src="./images/flower_w.png" alt="裝飾白花"></div>
+        </section>
     </main>
 </body>
 

@@ -80,6 +80,9 @@ a {
 #topbar {
     /* id用#號 */
     /* class用.號 */
+    position: fixed; /* 固定定位:不會跟著卷軸走 */
+    z-index: 999;
+    width: 100%; /* 定位會變成抓內容尺吋，所以要手動設回W100% */
     /* 預設水平主軸為水平 */
     display: flex;
     /* 主軸均分貼齊頭尾 */
@@ -160,7 +163,7 @@ a {
 
 .navigation .menu a {
     color: black;
-    font-size: .9rem;
+    font-size: .6rem;
     line-height: 1;
     margin: 0 20px;
     /* 控制子層的外距 */
@@ -186,6 +189,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .title h2 {
@@ -198,20 +202,54 @@ section {
 .title h3 {
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
     line-height: 2.5rem;
 }
 
+.box__list{
+    width: 80%;
+    display: flex;
+}
+.box__list .item{
+    flex: 1;
+    margin: 0 15px;
+}
+.box__list h1{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.box__list p{
+    font-size: .9rem;
+    text-align: justify;/* 齊行 */
+}
+/* 最新消息區 */
 /* 聯絡我們區 */
 #contact {
-    /* 背景影像 */
+    position: relative;/* 專門作為absolute的定位依據 */
+    overflow: hidden;
+    /* 背景影像基本設定 */
     background-image: url(../images/bg_contact.jpg);
     background-size: cover;
     background-position: center center;
     /* 固定背景 */
     background-attachment: fixed;
+}
+/* 裝飾花 */
+.flower_r{
+    position: absolute;
+    left: -60px;
+    bottom: -100px;
+    width: 300px;
+    transform: rotate(35deg);
+}
+.flower_w{
+    position: absolute;
+    right: -40px;
+    top: 50px;
+    width: 300px;
+    transform: rotate(-55deg)
 }
 
 #form--contact {
