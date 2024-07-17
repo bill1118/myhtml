@@ -24,9 +24,21 @@
     --lesser-2:#efdbdb;
     --lesser-3:#cdaaab;
     --lesser-4:#8f6b6d;
+    --lesser-5:#a98f81;
 
     /* 透明 */
     --alpha-w-60:rgba(255, 255, 255, .6);
+    --alpha-b-20:rgba(0, 0, 0, .2);
+    --alpha-b-40:rgba(0, 0, 0, .4);
+    --alpha-r-20:rgba(220, 185, 185, .2);
+    --alpha-r-60:rgba(220, 185, 185, .6);
+
+        /* 漸層 */
+        --gradient-w-a:rgba(255, 255, 255, 0.15),rgba(255, 255, 255, 0.5);
+
+        /* 陰影 */
+        --box-shadow-g:2px 2px 3px rgba(0, 0, 0, .15),
+            inset -1px -1px rgba(255, 255, 255, .8);
 }
 
 /* 重置所有標籤的樣式 */
@@ -265,6 +277,16 @@ section {
 }
 
 /* 最新消息區 */
+#news{
+    background-color: var(--primary);
+}
+#news .content{
+    background-color: var(--alpha-w-60);
+    transition: .4s;
+}
+#news .content:hover{
+    background-color: var(--light);
+}
 #news p{
     overflow: hidden;/* 多行省略 */
     text-overflow: ellipsis;/* 文字溢出時出現勝略號，若有設定line-clame時，瀏覽器會自動加入 */
@@ -274,6 +296,9 @@ section {
 }
 
 /* 服務項目區 */
+#service{
+    background-color: var(--secondary);
+}
 #service p{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -294,6 +319,11 @@ section {
     color: white;
     background-color: rgba(0, 0, 0, .4);
 }
+
+#service a:hover{
+    background-color: var(--alpha-b-20);
+}
+
 .svc-1{
     background-image: url(../images/pt_svc1.jpg);
 }
@@ -305,6 +335,37 @@ section {
 }
 .svc-4{
     background-image: url(../images/pt_svc4.jpg);
+}
+
+/* 相關影片區 */
+#video{
+    background-color: var(--tertiary);
+}
+
+.video{
+    width: 65%;
+    max-width: 1050px;
+}
+
+video{
+    width: 100%;
+}
+
+/* 關於我們區 */
+#about .content{
+    width: 65%;
+    height: 100vh;
+    background-color: var(--alpha-r-60);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about p{
+    width: 90%;
+    height: 65vh;
+    overflow: auto;
 }
 
 /* 聯絡我們區 */
