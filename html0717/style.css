@@ -1,0 +1,41 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box__list .item{
+    flex: 1;
+    margin: 0 20px 50px 0;
+    overflow: hidden;
+    width: 248px;
+    height: 164px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+}
+.box__list .content{
+    padding: 15px 10px;
+}
+
+.svc-1{
+    background-image: url(./images/pt_svc1.jpg);
+}
+.svc-2{
+    background-image: url(./images/pt_svc2.jpg);
+}
+.svc-3{
+    background-image: url(./images/pt_svc3.jpg);
+}
+.svc-4{
+    background-image: url(./images/pt_svc4.jpg);
+}

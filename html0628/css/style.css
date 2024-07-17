@@ -8,6 +8,27 @@
     src: url(../webfoons/LEMONMILK-Bold.otf);
 }
 
+:root{
+    /* 灰階 */
+    --deep:#444;
+    --grey:#999;
+    --light:#f1f1f1;
+
+    /* 背景 */
+    --primary:#f2edf0;
+    --secondary:#e6ece5;
+    --tertiary:#ecf0f4;
+
+    /* 輔助 */
+    --lesser-1:#f3e4e4;
+    --lesser-2:#efdbdb;
+    --lesser-3:#cdaaab;
+    --lesser-4:#8f6b6d;
+
+    /* 透明 */
+    --alpha-w-60:rgba(255, 255, 255, .6);
+}
+
 /* 重置所有標籤的樣式 */
 * {
     margin: 0;
@@ -153,7 +174,7 @@ a {
 }
 
 .navigation .menu li {
-    border-right: solid 1px #444;
+    border-right: solid 1px var();
 }
 
 .navigation .menu li:last-child {
@@ -163,7 +184,7 @@ a {
 
 .navigation .menu a {
     color: black;
-    font-size: .6rem;
+    font-size: 1rem;
     line-height: 1;
     margin: 0 20px;
     /* 控制子層的外距 */
@@ -210,12 +231,30 @@ section {
 
 .box__list{
     width: 80%;
+    max-width: 1440px;
     display: flex;
 }
+
+.box__list figure{
+    height: 35vh;
+}
+
 .box__list .item{
     flex: 1;
     margin: 0 15px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, .20);
+    border-radius: 20px;
+    overflow: hidden;
 }
+
+.box__list img{
+    object-fit: cover;/* 會等比例剪裁圖片 */
+    height: 100%;
+}
+.box__list .content{
+    padding: 15px 20px;
+}
+
 .box__list h1{
     font-size: 1.3rem;
     font-weight: 600;
@@ -224,7 +263,50 @@ section {
     font-size: .9rem;
     text-align: justify;/* 齊行 */
 }
+
 /* 最新消息區 */
+#news p{
+    overflow: hidden;/* 多行省略 */
+    text-overflow: ellipsis;/* 文字溢出時出現勝略號，若有設定line-clame時，瀏覽器會自動加入 */
+    display: -webkit-box;/* 彈性布局 */
+    -webkit-box-orient: vertical;/* 定義box垂直布局 */
+    -webkit-line-clamp: 5;/* 限制行數 */
+}
+
+/* 服務項目區 */
+#service p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;/* 單行省略 */
+}
+
+#service .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 65vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#service a{
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, .4);
+}
+.svc-1{
+    background-image: url(../images/pt_svc1.jpg);
+}
+.svc-2{
+    background-image: url(../images/pt_svc2.jpg);
+}
+.svc-3{
+    background-image: url(../images/pt_svc3.jpg);
+}
+.svc-4{
+    background-image: url(../images/pt_svc4.jpg);
+}
+
 /* 聯絡我們區 */
 #contact {
     position: relative;/* 專門作為absolute的定位依據 */
@@ -236,6 +318,7 @@ section {
     /* 固定背景 */
     background-attachment: fixed;
 }
+
 /* 裝飾花 */
 .flower_r{
     position: absolute;
@@ -244,6 +327,7 @@ section {
     width: 300px;
     transform: rotate(35deg);
 }
+
 .flower_w{
     position: absolute;
     right: -40px;
