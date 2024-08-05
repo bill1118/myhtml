@@ -148,6 +148,8 @@
     transition: all 0.3s;
 }
 
+
+
 #banner .content-slider nav .controls label .progressbar {
     position: absolute;
     top: 0;
@@ -220,3 +222,17 @@
         margin-left: 0;
     }
 }
+
+@media (max-width:640px) {
+    #banner .content-slider nav .controls label{
+        margin: 0 5px;
+    }
+    #banner .content-slider .slider .banner .banner-inner-wrapper h2 {
+        font-size: 2rem;
+    }
+    
+    #banner .content-slider .slider .banner .banner-inner-wrapper h1 {
+        font-size: 3.5rem;
+    }
+}
+
