@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            font-size: 3rem;
+            color: white;
+            height: 100vh;
+            line-height: 100vh;
+            text-align: center;
+            background: antiquewhite;
+        }
+        .row{
+            display: flex;
+        }
+
+        .col{
+            flex: 1;/* 主軸(水平)為寬度均分 */
+            height: 300px;
+            margin: 15px;
+            background: wheat;
+        }
+
+        footer{
+            font-size: 3rem;
+            color: white;
+            height: 30vh;
+            line-height: 30vh;
+            text-align: center;
+            background: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <header>Banner</header>
+    <main>
+        <!-- 必須寫在子元素身上 -->
+        <!-- 預設的淡出淡淡入 -->
+        <div class="row">
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+        </div>
+        <!-- 旋轉載入 -->
+        <div class="row">
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+        </div>
+        <!-- 左右載入 -->
+        <div class="row">
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+        </div>
+        <!-- 開門翻轉載入 -->
+        <div class="row">
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+        </div>
+        <!-- 透視翻轉載入 -->
+        <div class="row">
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+            <div class="col smoove"></div>
+        </div>
+        <footer>Footer</footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery Smoove -->
+    <script src="https//cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+    <script>
+        $('.smoove').smoove({
+            offset:'40%'
+        });
+    </script>
+</body>
+</html>
