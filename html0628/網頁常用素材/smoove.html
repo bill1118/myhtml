@@ -23,7 +23,7 @@
 
         .col{
             flex: 1;/* 主軸(水平)為寬度均分 */
-            height: 300px;
+            height: 500px;
             margin: 15px;
             background: wheat;
         }
@@ -49,24 +49,26 @@
         </div>
         <!-- 旋轉載入 -->
         <div class="row">
-            <div class="col smoove"></div>
-            <div class="col smoove"></div>
-            <div class="col smoove"></div>
+            <!-- 子元素不動作，即個別設定 -->
+            <div class="col smoove" data-move-x="-120%" data-rotate="90deg"></div>
+            <div class="col smoove" data-move-x="-60%" data-rotate="45deg" data-move-y="100px"></div>
+            <div class="col smoove" data-move-x="120%" data-rotate="-90deg"></div>
         </div>
         <!-- 左右載入 -->
         <div class="row">
-            <div class="col smoove"></div>
-            <div class="col smoove"></div>
-            <div class="col smoove"></div>
-            <div class="col smoove"></div>
+            <div class="col smoove"  data-move-x="-200px" data-move-y="100px"></div>
+            <div class="col smoove"  data-move-x="-100px" data-move-y="100px"></div>
+            <div class="col smoove"  data-move-x="100px" data-move-y="100px"></div>
+            <div class="col smoove"  data-move-x="200px" data-move-y="100px"></div>
         </div>
         <!-- 開門翻轉載入 -->
         <div class="row">
-            <div class="col smoove"></div>
-            <div class="col smoove"></div>
+            <div class="col smoove"  data-move-x="-120%" data-rotate="90deg"></div>
+            <div class="col smoove"  data-move-x="120%" data-rotate="-90deg"></div>
         </div>
         <!-- 透視翻轉載入 -->
-        <div class="row">
+        <div class="row smoove-z">
+            <!-- 子元素相同>就直接設定在父元素上 -->
             <div class="col smoove"></div>
             <div class="col smoove"></div>
             <div class="col smoove"></div>
@@ -78,10 +80,15 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- jQuery Smoove -->
-    <script src="https//cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
     <script>
         $('.smoove').smoove({
             offset:'40%'
+        });
+        $('.smoove-z').smoove({
+            moveZ :'-500px',
+            rotateX :'90deg',
+            moveY :'250px'
         });
     </script>
 </body>

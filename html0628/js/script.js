@@ -34,3 +34,14 @@ $(function () {
     });
 
 });
+
+//jQuery smoove
+$('.smoove').smoove({
+    offset: '30%'
+});
+
+$('.smoove-z').smoove({
+    moveZ :'-500px',
+    rotateX :'90deg',
+    moveY :'250px'
+});
