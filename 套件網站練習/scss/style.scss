@@ -8,7 +8,6 @@ img {
     width: 100%;
 }
 
-
 .title{
     position: relative;
     @include bordered-l;
@@ -41,8 +40,7 @@ img {
         line-height: 1;
         span{
             font: {
-                size: 1rem;
-            
+                size: 1rem;           
             }
         }
     }
@@ -74,6 +72,36 @@ img {
 .blobs-3{
     mask-image: url(../images/blobs-3.svg);
 }
+
+.clip{
+    display: block;
+    // clip-path: circle(50%);//圓形
+    // clip-path: ellipse();//xy50%為置中,橢圓形
+    // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);//平行四邊形
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);//倒三角形
+
+    caret-color: transparent;
+
+    &::before{
+        content: '';
+        background-color: transparent;
+    }
+
+    &:hover{
+        background-color: antiquewhite;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            background-color: map-get( $color, alpha-b-40 );
+        }
+
+    }
+}
+
+
 #new {
     a {
         position: relative;
@@ -98,3 +126,23 @@ img {
         }
     }
 }
+
+/* 熱門商品 */
+#hot {
+    .col{
+        position: relative;
+
+        h2{
+            position: absolute;
+            width: 100%;
+            top: calc(50%, .2rem);
+            left: calc(50%, );
+            z-index: 2;
+            font-size: ;
+            color: ;
+            text-shadow: ;
+        }
+    }
+}
+
+
